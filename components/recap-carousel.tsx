@@ -153,10 +153,9 @@ export function RecapCarousel({ data }: RecapCarouselProps) {
     <div className="flex flex-col items-center w-full px-2 sm:px-4">
       <div className="w-full max-w-4xl mx-auto aspect-[3/4] sm:aspect-[16/10] relative overflow-hidden rounded-xl shadow-xl">
         <Button
-          variant="outline"
           size="icon"
           onClick={() => setIsPlaying(!isPlaying)}
-          className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background scale-75 sm:scale-90"
+          className="absolute top-4 right-4 z-10 bg-background/10 hover:bg-background/20 scale-75 sm:scale-90"
         >
           {isPlaying ? (
             <Pause className="h-6 w-6" strokeWidth={1} />

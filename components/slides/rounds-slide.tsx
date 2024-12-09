@@ -31,9 +31,9 @@ const item = {
 
 const RankBadge = ({ rank }: { rank: number }) => {
   const colors = {
-    1: { border: "border-yellow-400", text: "text-yellow-600" },
-    2: { border: "border-gray-300", text: "text-gray-500" },
-    3: { border: "border-amber-600", text: "text-amber-700" },
+    1: { border: "border-yellow-600", text: "text-yellow-700" },
+    2: { border: "border-gray-500", text: "text-gray-700" },
+    3: { border: "border-amber-800", text: "text-amber-800" },
   };
 
   const style = colors[rank as keyof typeof colors];
@@ -55,7 +55,7 @@ const RankBadge = ({ rank }: { rank: number }) => {
       <div
         className={`absolute w-12 h-12 rounded-full border-2 ${style.border} flex items-center justify-center bg-white`}
       >
-        <Star className={`w-6 h-6 ${style.text}`} strokeWidth={1} />
+        <Star className={`w-6 h-6 ${style.text}`} strokeWidth={2} />
       </div>
 
       <div
