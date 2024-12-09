@@ -15,9 +15,9 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const handleShare = async (platform: 'twitter' | 'farcaster') => {
-    const text = `Check out my Gitcoin Grants impact! I've donated $${totalDonated.toFixed(
-      2
-    )} to ${projectsCount} projects! 🌟`;
+    const text = `I've donated $${totalDonated.toFixed(
+      2,
+    )} to ${projectsCount} projects! Check out my @Gitcoin Grants impact! 🌟`;
 
     if (platform === 'twitter') {
       window.open(
