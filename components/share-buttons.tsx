@@ -47,13 +47,13 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
       <Button
         variant="outline"
         size="sm"
-        onClick={() => handleShare('twitter')}
+        onClick={() => handleShare("twitter")}
         className="w-full sm:w-auto"
       >
         <Share2 className="w-4 h-4 mr-2" />
         Share on Twitter
       </Button>
-      <Button
+      {/* <Button
         variant="outline"
         size="sm"
         onClick={() => handleShare('farcaster')}
@@ -61,10 +61,10 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
       >
         <Share2 className="w-4 h-4 mr-2" />
         Share on Farcaster
-      </Button>
-      <Button 
-        variant="outline" 
-        size="sm" 
+      </Button> */}
+      <Button
+        variant="outline"
+        size="sm"
         onClick={copyLink}
         className="w-full sm:w-auto"
       >
