@@ -50,7 +50,7 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
         onClick={() => handleShare("twitter")}
         className="w-full sm:w-auto"
       >
-        <Share2 className="w-4 h-4 mr-2" />
+        <Share2 className="w-4 h-4 mr-2" strokeWidth={1} />
         Share on Twitter
       </Button>
       {/* <Button
@@ -68,7 +68,7 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
         onClick={copyLink}
         className="w-full sm:w-auto"
       >
-        <Copy className="w-4 h-4 mr-2" />
+        <Copy className="w-4 h-4 mr-2" strokeWidth={1} />
         Copy Link
       </Button>
     </div>

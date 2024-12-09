@@ -42,7 +42,7 @@ export function ChainsIntroSlide({
             }}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Link className="w-20 h-20 text-amber-500" />
+            <Link className="w-20 h-20 text-amber-500" strokeWidth={1} />
           </motion.div>
 
           <motion.div
@@ -51,7 +51,7 @@ export function ChainsIntroSlide({
             transition={{ delay: 0.8, duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <Link className="w-24 h-24 text-amber-400" />
+            <Link className="w-24 h-24 text-amber-400" strokeWidth={1} />
           </motion.div>
         </div>
 
@@ -85,7 +85,9 @@ export function ChainsIntroSlide({
             <Replace
               text={subtext}
               placeholder="<chainsCount>"
-              replacement={<span className="font-extrabold text-2xl">{chainsCount}</span>}
+              replacement={
+                <span className="font-extrabold text-2xl">{chainsCount}</span>
+              }
             />
           </motion.p>
         </div>

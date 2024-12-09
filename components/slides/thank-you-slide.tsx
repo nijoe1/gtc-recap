@@ -34,7 +34,10 @@ export function ThankYouSlide({ address, className }: ThankYouSlideProps) {
     >
       <div className="text-center space-y-6 sm:space-y-8 px-4 max-w-xl">
         <motion.div animate={heartbeat}>
-          <Heart className="w-16 h-16 sm:w-20 sm:h-20 mx-auto text-rose-500/80" />
+          <Heart
+            className="w-16 h-16 sm:w-20 sm:h-20 mx-auto text-rose-500/80"
+            strokeWidth={1}
+          />
         </motion.div>
         <div className="space-y-4">
           <motion.h2

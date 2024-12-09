@@ -28,7 +28,7 @@ export function CarouselControls({
         onClick={onPrevious}
         className="rounded-full hover:bg-background/80"
       >
-        <ChevronLeft className="h-4 w-4" />
+        <ChevronLeft className="h-4 w-4" strokeWidth={1} />
       </Button>
 
       <div className="flex items-center gap-2">
@@ -38,8 +38,8 @@ export function CarouselControls({
             onClick={() => onDotClick(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               currentSlide === index
-                ? 'bg-primary w-4'
-                : 'bg-primary/30 hover:bg-primary/50'
+                ? "bg-primary w-4"
+                : "bg-primary/30 hover:bg-primary/50"
             }`}
           />
         ))}
@@ -51,7 +51,7 @@ export function CarouselControls({
         onClick={onNext}
         className="rounded-full hover:bg-background/80"
       >
-        <ChevronRight className="h-4 w-4" />
+        <ChevronRight className="h-4 w-4" strokeWidth={1} />
       </Button>
     </div>
   );

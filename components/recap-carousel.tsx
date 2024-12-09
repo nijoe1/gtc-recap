@@ -159,9 +159,9 @@ export function RecapCarousel({ data }: RecapCarouselProps) {
           className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background scale-75 sm:scale-90"
         >
           {isPlaying ? (
-            <Pause className="h-6 w-6" />
+            <Pause className="h-6 w-6" strokeWidth={1} />
           ) : (
-            <Play className="h-6 w-6" />
+            <Play className="h-6 w-6" strokeWidth={1} />
           )}
         </Button>
 

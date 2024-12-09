@@ -42,7 +42,10 @@ export function RoundsIntroSlide({
               delay: 0.5,
             }}
           >
-            <CircleDot className="w-20 h-20 mx-auto text-blue-500" />
+            <CircleDot
+              className="w-20 h-20 mx-auto text-blue-500"
+              strokeWidth={1}
+            />
           </motion.div>
           <motion.div
             className="absolute inset-0 flex items-center justify-center"
@@ -53,7 +56,7 @@ export function RoundsIntroSlide({
               duration: 0.5,
             }}
           >
-            <CircleDot className="w-20 h-20 text-blue-400" />
+            <CircleDot className="w-20 h-20 text-blue-400" strokeWidth={1} />
           </motion.div>
         </div>
 

@@ -52,7 +52,7 @@ export function ProjectsIntroSlide({
             }}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Stars className="w-24 h-24 text-purple-400/30" />
+            <Stars className="w-24 h-24 text-purple-400/30" strokeWidth={1} />
           </motion.div>
           <motion.div
             initial={{ scale: 0 }}
@@ -64,7 +64,10 @@ export function ProjectsIntroSlide({
               delay: 0.8,
             }}
           >
-            <Rocket className="w-16 h-16 mx-auto text-purple-500" />
+            <Rocket
+              className="w-16 h-16 mx-auto text-purple-500"
+              strokeWidth={1}
+            />
           </motion.div>
         </div>
 

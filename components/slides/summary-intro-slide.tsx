@@ -38,7 +38,10 @@ export function SummaryIntroSlide({
             }}
             className="relative z-10"
           >
-            <Sparkles className="w-16 h-16 mx-auto text-emerald-500" />
+            <Sparkles
+              className="w-16 h-16 mx-auto text-emerald-500"
+              strokeWidth={1}
+            />
           </motion.div>
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -46,7 +49,7 @@ export function SummaryIntroSlide({
             transition={{ delay: 0.8, duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <Sparkles className="w-24 h-24 text-emerald-400" />
+            <Sparkles className="w-24 h-24 text-emerald-400" strokeWidth={1} />
           </motion.div>
         </div>
 

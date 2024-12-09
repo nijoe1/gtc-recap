@@ -49,8 +49,10 @@ const RankBadge = ({ rank }: { rank: number }) => {
       }}
       className={`relative w-12 h-12 rounded-full border-2 ${style.border} flex items-center justify-center bg-white`}
     >
-      <Star className={`w-6 h-6 ${style.text}`} />
-      <div className={`mb-0.5 absolute -bottom-1 text-xs font-bold ${style.text}`}>
+      <Star className={`w-6 h-6 ${style.text}`} strokeWidth={1} />
+      <div
+        className={`mb-0.5 absolute -bottom-1 text-xs font-bold ${style.text}`}
+      >
         {rank}
       </div>
     </motion.div>
