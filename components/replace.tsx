@@ -1,4 +1,3 @@
-import exp from "constants";
 import React from "react";
 
 const replacePlaceholderWithJSX = (
@@ -25,7 +24,7 @@ const Replace = ({
   placeholder: string;
   replacement: React.ReactNode;
 }) => {
-  return <div>{replacePlaceholderWithJSX(text, placeholder, replacement)}</div>;
+  return <>{replacePlaceholderWithJSX(text, placeholder, replacement)}</>;
 };
 
 export default Replace;

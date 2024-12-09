@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { logoSVG } from "./assets/logo";
 import { Toaster } from "@/components/ui/toaster";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -30,7 +31,7 @@ export default function RootLayout({
                     `,
           }}
         />
-      </head>
+      </Head>
       <body className={inter.className}>
         <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50">
           <header className="border-b">
