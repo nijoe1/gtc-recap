@@ -5,6 +5,7 @@ import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { thankyouMessages } from "@/lib/const/thankyou";
 import { pR } from "@/lib/utils";
+import { textStyles } from "@/lib/const/slideStyles";
 
 interface ThankYouSlideProps {
   address: string;
@@ -21,12 +22,14 @@ const heartbeat = {
 };
 
 export function ThankYouSlide({ address, className }: ThankYouSlideProps) {
-  
   const rand1 = pR(address, "ThankYouSlide-0", thankyouMessages.length);
   const rand2 = pR(address, "ThankYouSlide-1", thankyouMessages.length);
 
   const heading = thankyouMessages[rand1].heading;
   const subtext = thankyouMessages[rand2].subtext;
+
+  const textRnd = pR(address, "ThankYouSlide-2", textStyles.length);
+  const textStyle = textStyles[textRnd];
 
   return (
     <Card
@@ -35,7 +38,7 @@ export function ThankYouSlide({ address, className }: ThankYouSlideProps) {
       <div className="text-center space-y-6 sm:space-y-8 px-4 max-w-xl">
         <motion.div animate={heartbeat}>
           <Heart
-            className="w-16 h-16 sm:w-20 sm:h-20 mx-auto text-rose-500/80"
+            className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto ${textStyle}`}
             strokeWidth={1}
           />
         </motion.div>
@@ -49,7 +52,7 @@ export function ThankYouSlide({ address, className }: ThankYouSlideProps) {
             {heading}
           </motion.h2>
           <motion.p
-            className="text-xl text-muted-foreground max-w-lg mx-auto leading-relaxed"
+            className={`text-xl ${textStyle} max-w-lg mx-auto leading-relaxed`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}

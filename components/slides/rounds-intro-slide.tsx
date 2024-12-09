@@ -6,6 +6,7 @@ import { pR } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { CircleDot } from "lucide-react";
 import Pill from "../pill";
+import { textStyles } from "@/lib/const/slideStyles";
 
 interface RoundsIntroSlideProps {
   address: string;
@@ -23,6 +24,13 @@ export function RoundsIntroSlide({
 
   const heading = roundIntroMessages[rand1].heading;
   const subtext = roundIntroMessages[rand2].subtext;
+
+  const textRnd = pR(address, "RoundsIntroSlide-0", textStyles.length);
+  const textStyle = textStyles[textRnd];
+
+  const textRnd2 = pR(address, "RoundsIntroSlide-2", textStyles.length);
+  const textStyle2 = textStyles[textRnd2];
+
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
@@ -43,7 +51,7 @@ export function RoundsIntroSlide({
             }}
           >
             <CircleDot
-              className="w-20 h-20 mx-auto text-blue-500"
+              className={`w-20 h-20 mx-auto ${textStyle}`}
               strokeWidth={1}
             />
           </motion.div>
@@ -56,7 +64,7 @@ export function RoundsIntroSlide({
               duration: 0.5,
             }}
           >
-            <CircleDot className="w-20 h-20 text-blue-400" strokeWidth={1} />
+            <CircleDot className={`w-20 h-20 ${textStyle}`} strokeWidth={1} />
           </motion.div>
         </div>
 
@@ -66,7 +74,7 @@ export function RoundsIntroSlide({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.3, duration: 0.5 }}
           >
-            <span className="text-5xl font-bold text-blue-500">
+            <span className={`text-5xl font-bold ${textStyle}`}>
               {roundsCount}
             </span>
             <span className="text-2xl font-medium ml-2">Rounds</span>
@@ -82,13 +90,17 @@ export function RoundsIntroSlide({
           </motion.p>
 
           <motion.p
-            className="text-muted-foreground"
+            className={`leading-relaxed ${textStyle2}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.5 }}
           >
             Let&apos;s explore your{" "}
-            <Pill bgColor="#3b82f6">
+            <Pill
+              bgColor={`${textStyle
+                .replace("text-", "")
+                .replace(/[\[\]']+/g, "")}50`}
+            >
               <span className="font-bold">
                 Top {roundsCount >= 3 ? 3 : roundsCount}
               </span>

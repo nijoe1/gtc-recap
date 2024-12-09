@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import { textStyles } from "@/lib/const/slideStyles";
 import { summaryMessages } from "@/lib/const/summary";
 import { pR } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -37,12 +38,14 @@ export function SummarySlide({
   totalMatched,
   className,
 }: SummarySlideProps) {
-
   const rand1 = pR(address, "SummarySlide-0", summaryMessages.length);
   const rand2 = pR(address, "SummarySlide-1", summaryMessages.length);
 
   const heading = summaryMessages[rand1].heading;
   const subtext = summaryMessages[rand2].subtext;
+
+  const textRnd = pR(address, "SummarySlide-0", textStyles.length);
+  const textStyle = textStyles[textRnd];
 
   return (
     <Card
@@ -72,7 +75,7 @@ export function SummarySlide({
             {heading}
           </motion.h2>
           <motion.p
-            className="text-sm sm:text-base text-muted-foreground"
+            className={`text-sm sm:text-base ${textStyle}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -83,7 +86,7 @@ export function SummarySlide({
 
         <div className="grid gap-4">
           <motion.div
-            className="bg-white/50 rounded-xl p-4 text-center perspective-1000"
+            className="bg-white/10 rounded-xl p-4 text-center perspective-1000"
             initial="hidden"
             animate="visible"
             variants={flipVariants}
@@ -97,13 +100,13 @@ export function SummarySlide({
             >
               {roundCount} Rounds Supported
             </motion.div>
-            <div className="text-sm text-muted-foreground">
+            <div className={`text-sm ${textStyle}`}>
               Rounds strengthened by your support
             </div>
           </motion.div>
 
           <motion.div
-            className="bg-white/50 rounded-xl p-4 text-center perspective-1000"
+            className="bg-white/10 rounded-xl p-4 text-center perspective-1000"
             initial="hidden"
             animate="visible"
             variants={flipVariants}
@@ -117,13 +120,13 @@ export function SummarySlide({
             >
               {projectsCount} Projects Funded
             </motion.div>
-            <div className="text-sm text-muted-foreground">
+            <div className={`text-sm ${textStyle}`}>
               Projects made possible by your donations
             </div>
           </motion.div>
 
           <motion.div
-            className="bg-white/50 rounded-xl p-4 text-center perspective-1000"
+            className="bg-white/10 rounded-xl p-4 text-center perspective-1000"
             initial="hidden"
             animate="visible"
             variants={flipVariants}
@@ -137,7 +140,7 @@ export function SummarySlide({
             >
               ${totalDonated.toFixed(2)}
             </motion.div>
-            <div className="text-sm text-muted-foreground">
+            <div className={`text-sm ${textStyle}`}>
               Total Contributions to Public Goods
             </div>
           </motion.div>

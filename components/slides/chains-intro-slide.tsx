@@ -6,6 +6,7 @@ import { pR } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Link } from "lucide-react";
 import Replace from "../replace";
+import { textStyles } from "@/lib/const/slideStyles";
 
 interface ChainsIntroSlideProps {
   address: string;
@@ -18,12 +19,14 @@ export function ChainsIntroSlide({
   chainsCount,
   className,
 }: ChainsIntroSlideProps) {
-
   const rand1 = pR(address, "ChainsIntroSlide-0", chainsIntro.length);
   const rand2 = pR(address, "ChainsIntroSlide-1", chainsIntro.length);
 
   const heading = chainsIntro[rand1].heading;
-  const subtext = chainsIntro[rand2].subtext
+  const subtext = chainsIntro[rand2].subtext;
+
+  const textRnd = pR(address, "ChainsIntroSlide-2", textStyles.length);
+  const textStyle = textStyles[textRnd];
 
   return (
     <Card
@@ -42,7 +45,7 @@ export function ChainsIntroSlide({
             }}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Link className="w-20 h-20 text-amber-500" strokeWidth={1} />
+            <Link className={`w-20 h-20 ${textStyle}`} strokeWidth={1} />
           </motion.div>
 
           <motion.div
@@ -51,7 +54,7 @@ export function ChainsIntroSlide({
             transition={{ delay: 0.8, duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <Link className="w-24 h-24 text-amber-400" strokeWidth={1} />
+            <Link className={`w-24 h-24 ${textStyle}`} strokeWidth={1} />
           </motion.div>
         </div>
 
@@ -77,7 +80,7 @@ export function ChainsIntroSlide({
           </motion.p>
 
           <motion.p
-            className="text-muted-foreground"
+            className={`${textStyle} text-lg leading-relaxed`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.5 }}

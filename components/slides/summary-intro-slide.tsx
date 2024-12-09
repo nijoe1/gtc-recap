@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import { textStyles } from "@/lib/const/slideStyles";
 import { summaryIntro } from "@/lib/const/summaryIntro";
 import { pR } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -21,6 +22,12 @@ export function SummaryIntroSlide({
   const heading = summaryIntro[rand1].heading;
   const subtext = summaryIntro[rand2].subtext;
 
+  const textRnd = pR(address, "ChainsSlide-0", textStyles.length);
+  const textStyle = textStyles[textRnd];
+
+  const textRnd2 = pR(address, "ChainsSlide-2", textStyles.length);
+  const textStyle2 = textStyles[textRnd2];
+
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
@@ -39,7 +46,7 @@ export function SummaryIntroSlide({
             className="relative z-10"
           >
             <Sparkles
-              className="w-16 h-16 mx-auto text-emerald-500"
+              className={`w-16 h-16 mx-auto ${textStyle}`}
               strokeWidth={1}
             />
           </motion.div>
@@ -49,13 +56,13 @@ export function SummaryIntroSlide({
             transition={{ delay: 0.8, duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <Sparkles className="w-24 h-24 text-emerald-400" strokeWidth={1} />
+            <Sparkles className={`w-24 h-24 ${textStyle}`} strokeWidth={1} />
           </motion.div>
         </div>
 
         <div className="space-y-6">
           <motion.h2
-            className="text-3xl sm:text-4xl font-bold text-emerald-600"
+            className={`text-3xl sm:text-4xl font-bold ${textStyle}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.5 }}
@@ -64,7 +71,7 @@ export function SummaryIntroSlide({
           </motion.h2>
 
           <motion.p
-            className="text-xl leading-relaxed text-muted-foreground"
+            className={`text-xl leading-relaxed ${textStyle2}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.5 }}

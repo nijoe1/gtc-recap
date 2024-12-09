@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import projectMessages from "@/lib/const/projects";
+import { textStyles } from "@/lib/const/slideStyles";
 import { Project } from "@/lib/types";
 import { pR } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -38,6 +39,9 @@ export function ProjectsSlide({
   const heading = projectMessages[rand1].heading;
   const subtext = projectMessages[rand2].subtext;
 
+  const textRnd = pR(address, "ProjectsSlide-2", textStyles.length);
+  const textStyle = textStyles[textRnd];
+
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
@@ -52,9 +56,7 @@ export function ProjectsSlide({
           <h2 className="text-xl sm:text-3xl font-bold tracking-tight">
             {heading}
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground">
-            {subtext}
-          </p>
+          <p className={`text-sm sm:text-base ${textStyle}`}>{subtext}</p>
         </motion.div>
         <motion.div
           className="grid gap-3"
@@ -66,7 +68,7 @@ export function ProjectsSlide({
             <motion.div
               key={index}
               variants={item}
-              className="bg-white/50 rounded-xl p-3 sm:p-4 transition-colors hover:bg-white/60"
+              className="bg-white/10 rounded-xl p-3 sm:p-4 transition-colors hover:bg-white/20"
             >
               <div className="flex items-center gap-3 sm:gap-4">
                 <motion.div
@@ -90,7 +92,7 @@ export function ProjectsSlide({
                       ? project.name.slice(0, 40) + "..."
                       : project.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground truncate">
+                  <p className={`text-xs sm:text-sm ${textStyle} truncate`}>
                     {project.roundName}
                   </p>
                 </div>

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Rocket, Stars } from "lucide-react";
 import Replace from "../replace";
 import Pill from "../pill";
+import { textStyles } from "@/lib/const/slideStyles";
 
 interface ProjectsIntroSlideProps {
   address: string;
@@ -35,6 +36,12 @@ export function ProjectsIntroSlide({
   const heading = projectsIntroMessages[rand1].heading;
   const subtext = projectsIntroMessages[rand2].subtext;
 
+  const textRnd = pR(address, "ProjectsIntroSlide-1", textStyles.length);
+  const textStyle = textStyles[textRnd];
+
+  const textRnd2 = pR(address, "ProjectsIntroSlide-2", textStyles.length);
+  const textStyle2 = textStyles[textRnd2];
+
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
@@ -52,7 +59,10 @@ export function ProjectsIntroSlide({
             }}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Stars className="w-24 h-24 text-purple-400/30" strokeWidth={1} />
+            <Stars
+              className={`w-24 h-24 ${textStyle} opacity-30`}
+              strokeWidth={1}
+            />
           </motion.div>
           <motion.div
             initial={{ scale: 0 }}
@@ -65,7 +75,7 @@ export function ProjectsIntroSlide({
             }}
           >
             <Rocket
-              className="w-16 h-16 mx-auto text-purple-500"
+              className={`w-16 h-16 mx-auto ${textStyle}`}
               strokeWidth={1}
             />
           </motion.div>
@@ -81,10 +91,10 @@ export function ProjectsIntroSlide({
             }}
             className="space-y-2"
           >
-            <div className="text-5xl font-bold text-purple-500">
+            <div className={`text-5xl font-bold ${textStyle}`}>
               {projectsCount}
             </div>
-            <div className="text-xl text-muted-foreground">{heading}</div>
+            <div className={`text-xl ${textStyle2}`}>{heading}</div>
           </motion.div>
 
           <motion.p
@@ -101,13 +111,17 @@ export function ProjectsIntroSlide({
           </motion.p>
 
           <motion.p
-            className="text-muted-foreground"
+            className={`leading-relaxed ${textStyle2}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.7, duration: 0.5 }}
           >
             Let&apos;s explore your{" "}
-            <Pill bgColor="#A855F7">
+            <Pill
+              bgColor={`${textStyle
+                .replace("text-", "")
+                .replace(/[\[\]']+/g, "")}50`}
+            >
               <span className="font-bold">
                 Top {projectsCount >= 3 ? 3 : projectsCount}
               </span>

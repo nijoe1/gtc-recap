@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { pR, stringToBlobUrl } from "@/lib/utils";
 import { chainsMessages } from "@/lib/const/chains";
+import { textStyles } from "@/lib/const/slideStyles";
 
 interface ChainsSlideProps {
   address: string;
@@ -63,6 +64,11 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
   const heading = chainsMessages[rand1].heading;
   const subtext = chainsMessages[rand2].subtext;
 
+  const textRnd = pR(address, "ChainsSlide-2", textStyles.length);
+  const textStyle = textStyles[textRnd];
+
+  const otherTextStyles = textStyles.filter((style) => style !== textStyle);
+
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-8`}
@@ -77,9 +83,7 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight mb-2">
             {heading}
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground">
-            {subtext}
-          </p>
+          <p className={`text-sm sm:text-base ${textStyle}`}>{subtext}</p>
         </motion.div>
 
         <motion.div
@@ -124,17 +128,21 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
                         ${chain.amount.toFixed(2)}
                       </span>
                     </div>
-                    <div className="h-2 bg-gray-100 rounded-full mt-2 overflow-hidden">
+                    <div className="h-2 bg-gray-100/20 rounded-full mt-2 overflow-hidden">
                       <motion.div
                         className="h-full rounded-full"
-                        style={{ backgroundColor: chain.color }}
+                        style={{
+                          backgroundColor: otherTextStyles[index]
+                            .replace("text-", "")
+                            .replace(/[\[\]']+/g, ""),
+                        }}
                         variants={progressVariants}
                         custom={percent}
                       />
                     </div>
                   </div>
                 </div>
-                <div className="text-xs text-muted-foreground ml-16">
+                <div className={`text-xs ${textStyle} ml-16`}>
                   {percent.toFixed(1)}% of total contributions
                 </div>
               </motion.div>
@@ -145,12 +153,10 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
         <motion.div
           className="mt-8 pt-6 border-t text-center"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 0.8 }}
           transition={{ delay: 1.2, duration: 0.5 }}
         >
-          <div className="text-sm text-muted-foreground">
-            Total Chain Impact
-          </div>
+          <div className={`text-sm ${textStyle}`}>Total Chain Impact</div>
           <div className="text-3xl font-bold mt-1">${total.toFixed(2)}</div>
         </motion.div>
       </div>

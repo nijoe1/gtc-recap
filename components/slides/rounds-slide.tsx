@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { roundMessages } from "@/lib/const/rounds";
+import { textStyles } from "@/lib/const/slideStyles";
 import { Round } from "@/lib/types";
 import { pR } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -47,11 +48,18 @@ const RankBadge = ({ rank }: { rank: number }) => {
         damping: 15,
         delay: (rank - 1) * 0.2,
       }}
-      className={`relative w-12 h-12 rounded-full border-2 ${style.border} flex items-center justify-center bg-white`}
+      className="relative w-14 h-14 rounded-full flex items-center justify-center bg-white"
     >
-      <Star className={`w-6 h-6 ${style.text}`} strokeWidth={1} />
+      <div className="absolute w-full h-full rounded-full border-4 border-white"></div>
+
       <div
-        className={`mb-0.5 absolute -bottom-1 text-xs font-bold ${style.text}`}
+        className={`absolute w-12 h-12 rounded-full border-2 ${style.border} flex items-center justify-center bg-white`}
+      >
+        <Star className={`w-6 h-6 ${style.text}`} strokeWidth={1} />
+      </div>
+
+      <div
+        className={`mb-0.5 absolute bottom-0.5 text-xs font-bold ${style.text}`}
       >
         {rank}
       </div>
@@ -65,6 +73,9 @@ export function RoundsSlide({ address, rounds, className }: RoundsSlideProps) {
 
   const heading = roundMessages[rand1].heading;
   const subtext = roundMessages[rand2].subtext;
+
+  const textRnd = pR(address, "RoundsSlide-0", textStyles.length);
+  const textStyle = textStyles[textRnd];
 
   return (
     <Card
@@ -80,9 +91,7 @@ export function RoundsSlide({ address, rounds, className }: RoundsSlideProps) {
           <h2 className="text-xl sm:text-3xl font-bold tracking-tight">
             {heading}
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground">
-            {subtext}
-          </p>
+          <p className={`text-sm sm:text-base ${textStyle}`}>{subtext}</p>
         </motion.div>
         <motion.div
           className="grid gap-3"
@@ -94,7 +103,7 @@ export function RoundsSlide({ address, rounds, className }: RoundsSlideProps) {
             <motion.div
               key={index}
               variants={item}
-              className="bg-white/50 rounded-xl p-4 sm:p-6 transition-colors hover:bg-white/60"
+              className="bg-white/10 rounded-xl p-4 sm:p-6 transition-colors hover:bg-white/20"
             >
               <div className="flex items-center gap-4">
                 <RankBadge rank={index + 1} />
@@ -109,7 +118,7 @@ export function RoundsSlide({ address, rounds, className }: RoundsSlideProps) {
                       ${round.totalAmount.toFixed(2)}
                     </div>
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">
+                  <div className={`text-sm ${textStyle} mt-1`}>
                     {round.projectsCount} projects supported
                   </div>
                 </div>

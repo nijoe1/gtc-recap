@@ -8,6 +8,7 @@ import { logo } from "@/app/assets/logo";
 import { useEffect, useState } from "react";
 import { welcomeMessages } from "@/lib/const/welcome";
 import Replace from "../replace";
+import { textStyles } from "@/lib/const/slideStyles";
 
 interface WelcomeSlideProps {
   address: string;
@@ -17,17 +18,19 @@ interface WelcomeSlideProps {
 
 export function WelcomeSlide({ address, ens, className }: WelcomeSlideProps) {
   const [, setRendered] = useState(false);
-  const [blobUrl, ] = useState<string | null>(stringToBlobUrl(logo));
+  const [blobUrl] = useState<string | null>(stringToBlobUrl(logo));
   useEffect(() => {
     setRendered(true);
   }, []);
 
- 
   const rand1 = pR(address, "WelcomeSlide-0", welcomeMessages.length);
   const rand2 = pR(address, "WelcomeSlide-1", welcomeMessages.length);
 
   const heading = welcomeMessages[rand1].heading;
-  const subtext = welcomeMessages[rand2].subtext
+  const subtext = welcomeMessages[rand2].subtext;
+
+  const textRnd = pR(address, "WelcomeSlide-2", textStyles.length);
+  const textStyle = textStyles[textRnd];
 
   return (
     <Card
@@ -70,7 +73,7 @@ export function WelcomeSlide({ address, ens, className }: WelcomeSlideProps) {
               {heading}
             </motion.h2>
             <motion.p
-              className="text-xl sm:text-2xl text-muted-foreground max-w-lg mx-auto leading-relaxed"
+              className={`text-xl sm:text-2xl ${textStyle} max-w-lg mx-auto leading-relaxed`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -78,7 +81,13 @@ export function WelcomeSlide({ address, ens, className }: WelcomeSlideProps) {
                 duration: 0.6,
               }}
             >
-              <Replace text={subtext} placeholder="<userAddress>" replacement={<span className="text-base font-mono">{ens || address}</span>} />
+              <Replace
+                text={subtext}
+                placeholder="<userAddress>"
+                replacement={
+                  <span className="text-base font-mono">{ens || address}</span>
+                }
+              />
             </motion.p>
           </div>
         </div>
