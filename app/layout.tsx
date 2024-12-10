@@ -5,7 +5,7 @@ import { logoSVG } from "./assets/logo";
 import { Toaster } from "@/components/ui/toaster";
 import GlobalHead from "@/components/globalHeader";
 
-export const metadata: Metadata = {
+export async function generateMetadata(){
   title: "Gitcoin | Recap 2024",
   description: "Discover Your Gitcoin Impact",
   icons: {
