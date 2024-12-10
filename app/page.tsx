@@ -1,4 +1,4 @@
-import HelperPage from "./helperpage";
+import HelperPage from "./HelperPage";
 
 const getMetadata = async () => {
   return "https://gateway.pinata.cloud/ipfs/bafybeiascfaj7n4zt37xhf6pphstmf6cyhvbvia4oa4tfjluj2rnk67g6i";
