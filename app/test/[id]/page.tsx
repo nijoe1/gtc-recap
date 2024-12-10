@@ -1,4 +1,4 @@
-import HelperPage from "../HelperPage";
+import HelperPage from "../../HelperPage";
 
 const getMetadata = async () => {
   return "https://recap.gitcoin.co/twitter-image.png";
