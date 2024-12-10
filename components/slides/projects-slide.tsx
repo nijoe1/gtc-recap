@@ -4,8 +4,9 @@ import { Card } from "@/components/ui/card";
 import projectMessages from "@/lib/const/projects";
 import { textStyles } from "@/lib/const/slideStyles";
 import { Project } from "@/lib/types";
-import { pR } from "@/lib/utils";
+import { pR, stringToBlobUrl } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { grid } from "./assets/grid";
 
 interface ProjectsSlideProps {
   address: string;
@@ -45,6 +46,11 @@ export function ProjectsSlide({
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="w-full max-w-xl">
         <motion.div

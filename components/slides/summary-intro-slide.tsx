@@ -3,9 +3,10 @@
 import { Card } from "@/components/ui/card";
 import { textStyles } from "@/lib/const/slideStyles";
 import { summaryIntro } from "@/lib/const/summaryIntro";
-import { pR } from "@/lib/utils";
+import { pR, stringToBlobUrl } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import { grid } from "./assets/grid";
 
 interface SummaryIntroSlideProps {
   address: string;
@@ -31,6 +32,11 @@ export function SummaryIntroSlide({
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="text-center space-y-8 px-4 max-w-xl">
         <div className="relative">

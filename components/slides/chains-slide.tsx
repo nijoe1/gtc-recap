@@ -7,6 +7,7 @@ import Image from "next/image";
 import { pR, stringToBlobUrl } from "@/lib/utils";
 import { chainsMessages } from "@/lib/const/chains";
 import { textStyles } from "@/lib/const/slideStyles";
+import { grid } from "./assets/grid";
 
 interface ChainsSlideProps {
   address: string;
@@ -72,6 +73,11 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-8`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="w-full max-w-xl">
         <motion.div

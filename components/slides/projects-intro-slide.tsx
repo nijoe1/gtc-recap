@@ -2,12 +2,13 @@
 
 import { Card } from "@/components/ui/card";
 import { projectsIntroMessages } from "@/lib/const/projectsIntro";
-import { pR } from "@/lib/utils";
+import { pR, stringToBlobUrl } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Rocket, Stars } from "lucide-react";
 import Replace from "../replace";
 import Pill from "../pill";
 import { textStyles } from "@/lib/const/slideStyles";
+import { grid } from "./assets/grid";
 
 interface ProjectsIntroSlideProps {
   address: string;
@@ -45,6 +46,11 @@ export function ProjectsIntroSlide({
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="text-center space-y-8 px-4 max-w-xl">
         <div className="relative">

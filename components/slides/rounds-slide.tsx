@@ -4,9 +4,10 @@ import { Card } from "@/components/ui/card";
 import { roundMessages } from "@/lib/const/rounds";
 import { textStyles } from "@/lib/const/slideStyles";
 import { Round } from "@/lib/types";
-import { pR } from "@/lib/utils";
+import { pR, stringToBlobUrl } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { grid } from "./assets/grid";
 
 interface RoundsSlideProps {
   address: string;
@@ -80,6 +81,11 @@ export function RoundsSlide({ address, rounds, className }: RoundsSlideProps) {
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="w-full max-w-xl">
         <motion.div

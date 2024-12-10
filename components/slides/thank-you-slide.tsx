@@ -4,10 +4,11 @@ import { Card } from "@/components/ui/card";
 import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { thankyouMessages } from "@/lib/const/thankyou";
-import { pR } from "@/lib/utils";
+import { pR, stringToBlobUrl } from "@/lib/utils";
 import { textStyles } from "@/lib/const/slideStyles";
 import Replace from "../replace";
 import { ShareButtons } from "../share-buttons";
+import { grid } from "./assets/grid";
 
 interface ThankYouSlideProps {
   address: string;
@@ -43,6 +44,11 @@ export function ThankYouSlide({
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="text-center space-y-6 sm:space-y-8 px-4 max-w-xl">
         <motion.div animate={heartbeat}>

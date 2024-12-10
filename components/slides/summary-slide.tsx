@@ -3,9 +3,10 @@
 import { Card } from "@/components/ui/card";
 import { textStyles } from "@/lib/const/slideStyles";
 import { summaryMessages } from "@/lib/const/summary";
-import { pR } from "@/lib/utils";
+import { pR, stringToBlobUrl } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Globe2 } from "lucide-react";
+import { grid } from "./assets/grid";
 interface SummarySlideProps {
   address: string;
   totalDonated: number;
@@ -50,6 +51,11 @@ export function SummarySlide({
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
+      style={{
+        backgroundImage: `url(${stringToBlobUrl(grid)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="w-full max-w-xl">
         <div className="text-center space-y-2 mb-8">
