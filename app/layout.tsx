@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       {
         url: "https://recap.gitcoin.co/twitter-image.png",
         width: 1200,
-        height: 630,
+        height: 564,
         alt: "Gitcoin Recap 2024",
       },
     ],
