@@ -21,7 +21,7 @@ export async function generateMetadata(){
     siteName: "Gitcoin",
     images: [
       {
-        url: "https://recap.gitcoin.co/twitter-image.png",
+        url: "https://github.com/nijoe1/gtc-recap/blob/master/app/twitter-image.png",
         width: 1200,
         height: 564,
         alt: "Gitcoin Recap 2024",
@@ -36,7 +36,7 @@ export async function generateMetadata(){
     description: "Discover Your Gitcoin Impact",
     images: [
       {
-        url: "https://recap.gitcoin.co/twitter-image.png",
+        url: "https://github.com/nijoe1/gtc-recap/blob/master/app/twitter-image.png",
         alt: "Gitcoin Recap 2024",
       },
     ],
