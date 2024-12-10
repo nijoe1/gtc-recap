@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import GlobalHead from "@/components/globalHeader";
 
 export async function generateMetadata(){
+
+  return {
   title: "Gitcoin | Recap 2024",
   description: "Discover Your Gitcoin Impact",
   icons: {
@@ -40,6 +42,7 @@ export async function generateMetadata(){
     ],
   },
 };
+}
 
 
 export default function RootLayout({
