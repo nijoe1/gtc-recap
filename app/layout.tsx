@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import GlobalHead from "@/components/globalHeader";
 
 const getMetadata = async() => {
-  return "https://recap.gitcoin.co/twitter-image.png";
+  return "https://gateway.pinata.cloud/ipfs/bafybeiascfaj7n4zt37xhf6pphstmf6cyhvbvia4oa4tfjluj2rnk67g6i";
 }
 
 export async function generateMetadata(){
