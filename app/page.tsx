@@ -1,13 +1,14 @@
 import HelperPage from "./HelperPage";
 
 const getMetadata = async () => {
-  return "https://gateway.pinata.cloud/ipfs/bafybeiascfaj7n4zt37xhf6pphstmf6cyhvbvia4oa4tfjluj2rnk67g6i";
+  return "https://recap.gitcoin.co/twitter-image.png";
 };
 
 export async function generateMetadata() {
   const image = await getMetadata();
 
   return {
+    metadataBase: new URL('https://recap.gitcoin.co/'),
     title: "Gitcoin | Recap 2024",
     description: "Discover Your Gitcoin Impact",
     icons: {
