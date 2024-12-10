@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { RecapStatus } from "@/lib/types";
 import { RecapCarousel } from "@/components/recap-carousel";
@@ -55,7 +53,7 @@ export async function generateMetadata(){
 };
 }
 
-export default function Home() {
+export default async function Home() {
   const [address, setAddress] = useState("");
   const [status, setStatus] = useState<RecapStatus>("idle");
   const router = useRouter();
