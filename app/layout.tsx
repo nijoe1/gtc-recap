@@ -5,7 +5,12 @@ import { logoSVG } from "./assets/logo";
 import { Toaster } from "@/components/ui/toaster";
 import GlobalHead from "@/components/globalHeader";
 
+const getMetadata = async() => {
+  return "https://recap.gitcoin.co/twitter-image.png";
+}
+
 export async function generateMetadata(){
+  const image = await getMetadata();
 
   return {
   title: "Gitcoin | Recap 2024",
@@ -21,7 +26,7 @@ export async function generateMetadata(){
     siteName: "Gitcoin",
     images: [
       {
-        url: "https://github.com/nijoe1/gtc-recap/blob/master/app/twitter-image.png",
+        url: image,
         width: 1200,
         height: 564,
         alt: "Gitcoin Recap 2024",
@@ -36,7 +41,7 @@ export async function generateMetadata(){
     description: "Discover Your Gitcoin Impact",
     images: [
       {
-        url: "https://github.com/nijoe1/gtc-recap/blob/master/app/twitter-image.png",
+        url: image,
         alt: "Gitcoin Recap 2024",
       },
     ],
