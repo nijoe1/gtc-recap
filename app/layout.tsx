@@ -8,6 +8,9 @@ import GlobalHead from "@/components/globalHeader";
 export const metadata: Metadata = {
   title: "Gitcoin | Recap 2024",
   description: "Discover Your Gitcoin Impact",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     url: "https://recap.gitcoin.co",
