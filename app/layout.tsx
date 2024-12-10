@@ -8,7 +8,36 @@ import GlobalHead from "@/components/globalHeader";
 export const metadata: Metadata = {
   title: "Gitcoin | Recap 2024",
   description: "Discover Your Gitcoin Impact",
+  openGraph: {
+    type: "website",
+    url: "https://recap.gitcoin.co",
+    title: "Gitcoin | Recap 2024",
+    description: "Discover Your Gitcoin Impact",
+    siteName: "Gitcoin",
+    images: [
+      {
+        url: "https://recap.gitcoin.co/twitter-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Gitcoin Recap 2024",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@Gitcoin",
+    creator: "@Gitcoin",
+    title: "Gitcoin | Recap 2024",
+    description: "Discover Your Gitcoin Impact",
+    images: [
+      {
+        url: "https://recap.gitcoin.co/twitter-image.png",
+        alt: "Gitcoin Recap 2024",
+      },
+    ],
+  },
 };
+
 
 export default function RootLayout({
   children,

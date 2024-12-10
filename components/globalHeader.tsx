@@ -4,14 +4,10 @@ import Head from "next/head";
 import { DM_Sans } from "next/font/google";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
-const baseUrl = "https://recap.gitcoin.co";
 
 export default function GlobalHead() {
   return (
     <Head>
-      <meta property="og:image" content={`${baseUrl}/opengraph-image.png`} />
-      <meta name="twitter:image" content={`${baseUrl}/twitter-image.png`} />
-
       <style jsx global>{`
         html,
         body {
