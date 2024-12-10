@@ -1,5 +1,13 @@
 export const summaryMessages = [
   {
+    heading: "We’re proud to have a legend like you",
+    subtext:
+      "Your contributions to projects and rounds have made a real impact — you're the real MVP!",
+  },
+];
+
+export const summaryMessagesOld = [
+  {
     heading: "Your Impact Summary",
     subtext:
       "Every contribution makes a difference in building a better Web3 ecosystem.",

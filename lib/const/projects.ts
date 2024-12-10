@@ -1,5 +1,12 @@
 const projectMessages = [
   {
+    heading: "Projects You Helped Boost",
+    subtext: "Here are the projects that topped your list this year",
+  },
+];
+
+const projectMessagesOld = [
+  {
     heading: "Top Projects Supported",
     subtext: "Here are the top 3 projects you contributed to this year",
   },

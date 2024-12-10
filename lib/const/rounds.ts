@@ -1,5 +1,12 @@
 export const roundMessages = [
   {
+    heading: "Grant Rounds, But Make It Impactful",
+    subtext: "Peep how your support came through for these rounds 👇",
+  },
+];
+
+export const roundMessagesOld = [
+  {
     heading: "Grant Rounds",
     subtext:
       "You’ve participated in several funding rounds, each supporting vital public goods.",

@@ -125,6 +125,8 @@ export function RecapCarousel({ data }: RecapCarouselProps) {
     />,
     <ThankYouSlide
       key="thank-you"
+      totalDonated={data.totalDonated}
+      projectsCount={data.projectsCount}
       address={data.address}
       className={`w-full h-full ${
         slideStyles[pR(data.address, "ThankYouSlide-5", slideStyles.length)]

@@ -1,5 +1,13 @@
 export const thankyouMessages = [
   {
+    heading: "Empowering What’s Next",
+    subtext:
+      "You’re not just supporting web3 — you’re building its future.<newLine>Share your 2024 with Gitcoin 👇",
+  },
+];
+
+export const thankyouMessagesOld = [
+  {
     heading: "Thank You for Supporting Public Goods!",
     subtext: "Your contributions are making Web3 better for everyone.",
   },

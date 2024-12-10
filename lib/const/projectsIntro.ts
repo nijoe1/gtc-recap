@@ -1,5 +1,12 @@
 export const projectsIntroMessages = [
   {
+    heading: "Your 2024 Impact",
+    subtext:
+      "This year, you’ve backed projects with a total donation of  <totalDonatedAmount>.",
+  },
+];
+export const projectsIntroMessagesOld = [
+  {
     heading: "Projects You’ve Supported",
     subtext:
       "You’ve made a real difference in empowering innovative projects this year with a total donation of <totalDonatedAmount>.",

@@ -1,5 +1,13 @@
 export const roundIntroMessages = [
   {
+    heading: "",
+    subtext:
+      "You showed up for public goods in multiple rounds this year — absolute icon.",
+  },
+];
+
+export const roundIntroMessagesOld = [
+  {
     heading: "Your Gitcoin Rounds Journey",
     subtext:
       "Explore how your contributions have supported numerous grant rounds this year.",

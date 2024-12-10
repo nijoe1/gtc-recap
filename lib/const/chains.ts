@@ -1,131 +1,139 @@
 export const chainsMessages = [
   {
-    heading: "Top Chain Impact",
+    heading: "Top Chains, Top Impact",
+    subtext:
+      "Your support left its mark on the leading blockchain networks this year.",
+  },
+];
+
+export const chainsMessagesOld = [
+  {
+    heading: "Top Chain Glow-Up",
     subtext: "Explore the top blockchains you’ve supported.",
   },
   {
-    heading: "Your Top Blockchain Impact",
+    heading: "Your Blockchain W’s",
     subtext: "See how your contributions have shaped the leading chains.",
   },
   {
-    heading: "Top Chains You’ve Empowered",
+    heading: "Chains You Boosted",
     subtext:
       "Your support has made a difference across the top blockchain networks.",
   },
   {
-    heading: "Top Chain Support Overview",
+    heading: "Chain Flex Recap",
     subtext: "Your impact on the top blockchain networks in 2024.",
   },
   {
-    heading: "Your Top Blockchain Contributions",
+    heading: "Your Blockchain MVPs",
     subtext: "Check out the top blockchain networks you’ve supported.",
   },
   {
-    heading: "Top Blockchains You’ve Impacted",
+    heading: "Chains You Put on the Map",
     subtext: "Your contributions have strengthened the top chains.",
   },
   {
-    heading: "Top Chain Impact",
+    heading: "Top Chains That Got a Boost",
     subtext: "Discover the top chains that benefited from your support.",
   },
   {
-    heading: "Top Chains Supported",
+    heading: "Chains You Powered Up",
     subtext: "These are the top blockchain networks you've supported.",
   },
   {
-    heading: "Your Top Blockchain Support",
+    heading: "Blockchain Drip Recap",
     subtext: "Explore the total impact across your top supported chains.",
   },
   {
-    heading: "Total Top Blockchain Impact",
+    heading: "Total Chain Power Moves",
     subtext:
       "Every contribution counts in supporting the top decentralized networks.",
   },
   {
-    heading: "Leading Chains Supported",
+    heading: "Top Chains Thriving Thanks to You",
     subtext:
       "Your contributions to these leading blockchain networks are making a difference.",
   },
   {
-    heading: "Top Blockchain Networks",
+    heading: "Chains You Put on Blast",
     subtext: "These top blockchains represent your support this year.",
   },
   {
-    heading: "The Top Chains You’ve Impacted",
+    heading: "Chains That Got the Glow-Up",
     subtext:
       "Your contributions have shaped the future of these top blockchain networks.",
   },
   {
-    heading: "Your Top Chain Contributions",
+    heading: "Your Blockchain Boss Moves",
     subtext:
       "Review how your donations impacted the top blockchain ecosystems.",
   },
   {
-    heading: "Your Top Chain Journey",
+    heading: "Chains You Took to the Next Level",
     subtext: "Take a look at the top blockchain networks you've impacted most.",
   },
   {
-    heading: "Top Blockchain Networks You’ve Supported",
+    heading: "Blockchain Wins You Delivered",
     subtext: "Explore the impact you've had on these top blockchain networks.",
   },
   {
-    heading: "Top Blockchain Contributions",
+    heading: "Chains You Uplifted",
     subtext: "Your donations have powered the growth of these top chains.",
   },
   {
-    heading: "Top Impact Across Blockchain Networks",
+    heading: "Chain Glow-Ups You Created",
     subtext: "These top chains have benefited from your contributions.",
   },
   {
-    heading: "Supporting Top Blockchain Ecosystems",
+    heading: "Your Blockchain Favs",
     subtext: "Your support reaches far across these top blockchain networks.",
   },
   {
-    heading: "Top Chains You’ve Supported",
+    heading: "Your Blockchain Power Moves",
     subtext: "Your contributions have powered these top chains.",
   },
   {
-    heading: "Your Top Chain Impact Summary",
+    heading: "Your Chain Highlights",
     subtext: "Your support has strengthened the top blockchain networks.",
   },
   {
-    heading: "Top Blockchain Contributions Overview",
+    heading: "Chains You Helped Thrive",
     subtext: "See the impact you've made across the top blockchain networks.",
   },
   {
-    heading: "Your Top Chain Support Summary",
+    heading: "Blockchain Powerhouse Recap",
     subtext:
       "Explore how your support has helped build the top blockchain networks.",
   },
   {
-    heading: "Top Chain Contributions Overview",
+    heading: "Your Blockchain Hits",
     subtext: "These are the top chains you’ve contributed to this year.",
   },
   {
-    heading: "Your Top Chain Donations",
+    heading: "Chains You Dominated",
     subtext:
       "Check out how your donations are supporting the growth of the top blockchain networks.",
   },
   {
-    heading: "Supporting Top Web3 Chains",
+    heading: "Blockchain Glow Recap",
     subtext: "Your impact across top chains is propelling the Web3 ecosystem.",
   },
   {
-    heading: "Top Chains You’ve Powered",
+    heading: "Chains You Helped Go Viral",
     subtext:
       "These top chains have received crucial support through your contributions.",
   },
   {
-    heading: "Your Top Blockchain Donations",
+    heading: "Your Chain Impact Vibes",
     subtext: "The top chains benefiting from your contributions this year.",
   },
   {
-    heading: "Leading Chains You’ve Supported",
+    heading: "Top Chains You Uplifted",
     subtext:
       "Your contributions have helped these top blockchain networks thrive.",
   },
   {
-    heading: "Top Blockchain Impact in 2024",
+    heading: "Blockchain W’s You Scored",
     subtext:
       "Your donations have driven growth on the top blockchain networks.",
   },

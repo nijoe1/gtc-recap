@@ -62,7 +62,7 @@ export function SummaryIntroSlide({
 
         <div className="space-y-6">
           <motion.h2
-            className={`text-3xl sm:text-4xl font-bold ${textStyle}`}
+            className={`text-3xl sm:text-4xl font-bold text-white`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.5 }}
@@ -71,7 +71,7 @@ export function SummaryIntroSlide({
           </motion.h2>
 
           <motion.p
-            className={`text-xl leading-relaxed ${textStyle2}`}
+            className={`text-xl leading-relaxed ${textStyle}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.5 }}

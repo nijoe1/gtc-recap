@@ -1,5 +1,13 @@
 export const welcomeMessages = [
   {
+    heading: "Your 2024 with Gitcoin",
+    subtext:
+      "<userAddress>, your contributions have helped power some of the most innovative web3 projects — let's take a look.",
+  },
+];
+
+export const welcomeMessagesOld = [
+  {
     heading: "Welcome to Your 2024 Gitcoin Recap",
     subtext:
       "<userAddress>, let’s explore your journey of supporting public goods and shaping the future of Web3",

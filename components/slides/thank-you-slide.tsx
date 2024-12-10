@@ -6,9 +6,13 @@ import { motion } from "framer-motion";
 import { thankyouMessages } from "@/lib/const/thankyou";
 import { pR } from "@/lib/utils";
 import { textStyles } from "@/lib/const/slideStyles";
+import Replace from "../replace";
+import { ShareButtons } from "../share-buttons";
 
 interface ThankYouSlideProps {
   address: string;
+  totalDonated: number;
+  projectsCount: number;
   className?: string;
 }
 
@@ -21,7 +25,12 @@ const heartbeat = {
   },
 };
 
-export function ThankYouSlide({ address, className }: ThankYouSlideProps) {
+export function ThankYouSlide({
+  address,
+  totalDonated,
+  projectsCount,
+  className,
+}: ThankYouSlideProps) {
   const rand1 = pR(address, "ThankYouSlide-0", thankyouMessages.length);
   const rand2 = pR(address, "ThankYouSlide-1", thankyouMessages.length);
 
@@ -57,8 +66,23 @@ export function ThankYouSlide({ address, className }: ThankYouSlideProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            {subtext}
+            <Replace
+              placeholder={"<newLine>"}
+              text={subtext}
+              replacement={
+                <>
+                  <br />
+                  <br />
+                </>
+              }
+            />
           </motion.p>
+          <div className="text-black mt-5">
+            <ShareButtons
+              totalDonated={totalDonated}
+              projectsCount={projectsCount}
+            />
+          </div>
         </div>
       </div>
     </Card>

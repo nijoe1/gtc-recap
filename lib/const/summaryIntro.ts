@@ -1,5 +1,13 @@
 export const summaryIntro = [
   {
+    heading: "You’re a net positive to humanity, and we’ve got the proof.",
+    subtext:
+      "Here’s how your support has driven growth and innovation across web3.",
+  },
+];
+
+export const summaryIntroOld = [
+  {
     heading: "Your Impact at a Glance",
     subtext:
       "Let’s explore how your contributions have made a difference in Web3.",
